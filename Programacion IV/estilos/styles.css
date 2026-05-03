@@ -36,7 +36,6 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    /* Asegúrate de que el botón no tenga márgenes que lo empujen */
     display: inline-block; 
 }
 
