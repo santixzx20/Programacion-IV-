@@ -3,13 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const botonCursos = document.getElementById('btn-cursos');
     const botonEstudiantes = document.getElementById('btn-estudiantes');
     const botonInicio = document.getElementById('btn-inicio');
+    const botonInscripciones = document.getElementById('btn-inscripciones');
     
     const vistaBienvenida = document.getElementById('contenido-principal');
     const vistaCursos = document.getElementById('menu-lateral');
     const vistaEstudiantes = document.getElementById('menu-estudiantes');
+    const vistaInscripciones = document.getElementById('menu-inscripciones');
 
     const tablaCursos = document.getElementById('tabla-cursos');
     const tablaEstudiantes = document.getElementById('tabla-estudiantes');
+    const tablaInscripciones = document.getElementById('tabla-inscripciones');
 
     // 2. Carga inicial de datos en las tablas
     cursos.forEach(curso => {
@@ -22,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tablaCursos.appendChild(fila);
     });
 
+    // Carga inicial de estudiantes
     estudiantes.forEach(estudiante => {
         const fila = document.createElement('tr');
         fila.innerHTML = `
@@ -31,11 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
         tablaEstudiantes.appendChild(fila);
     });
 
+    // Carga inicial de inscripciones
+    inscripciones.forEach(inscripcion => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+            <td style="padding: 15px" class="text-center">${inscripcion.estudiante}</td>
+            <td style="padding: 15px" class="text-center">${inscripcion.curso}</td>
+        `;
+        tablaInscripciones.appendChild(fila);
+    });
+    
+
+
     // 3. Función para ocultar todas las vistas (Reset)
     function ocultarVistas() {
         vistaBienvenida.classList.add('d-none');
         vistaCursos.classList.add('d-none');
         vistaEstudiantes.classList.add('d-none');
+        vistaInscripciones.classList.add('d-none');
     }
 
     // 4. Eventos de los botones (Fijos)
@@ -57,6 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ocultarVistas(); // Primero escondemos todo
         vistaEstudiantes.classList.remove('d-none'); // Mostramos solo estudiantes
     });
+
+    botonInscripciones.addEventListener('click', (e) => {
+        e.preventDefault();
+        ocultarVistas(); // Primero escondemos todo
+        vistaInscripciones.classList.remove('d-none'); // Mostramos solo inscripciones
+    });
 });
 
 // Datos
@@ -70,4 +93,10 @@ const estudiantes = [
     { nombre: 'Juan Pérez', email: 'juan.perez@example.com' },
     { nombre: 'María García', email: 'maria.garcia@example.com' },
     { nombre: 'Carlos López', email: 'carlos.lopez@example.com' }
+];
+
+const inscripciones = [
+    { estudiante: 'Juan Pérez', curso: 'Curso de JavaScript' },
+    { estudiante: 'María García', curso: 'Curso de HTML y CSS' },
+    { estudiante: 'Carlos López', curso: 'Curso de React' }
 ];
