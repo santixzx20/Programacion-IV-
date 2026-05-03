@@ -20,6 +20,7 @@
                 <li><a href="#" id="btn-inicio" class="btn btn-primary">Inicio</a></li>
                 <li><a href="#" id="btn-cursos" class="btn btn-primary">Cursos</a></li>
                 <li><a href="#" id="btn-estudiantes" class="btn btn-primary">Estudiantes</a></li>
+                <li><a href="#" id="btn-inscripciones" class="btn btn-primary">Inscripciones</a></li>
             </ul>
         </nav>
         <main> 
@@ -28,6 +29,7 @@
                     <p>Explora nuestra amplia variedad de cursos en diferentes áreas de conocimiento. Desde programación hasta diseño, tenemos algo para todos. ¡Empieza a aprender hoy mismo!</p>
             </section>
 
+            <!-- Sección para mostrar la tabla de cursos -->
             <section id="menu-lateral" class="d-none">
                     <table class="table-striped">
                         <thead>
@@ -44,6 +46,7 @@
 
             </section>
 
+            <!-- Sección para mostrar la tabla de estudiantes -->
             <section id="menu-estudiantes" class="d-none">
                     <table class="table-striped">
                         <thead>
@@ -55,6 +58,22 @@
                         </thead>
                         <tbody id="tabla-estudiantes">
                             <!-- Aquí se agregarán los estudiantes dinámicamente -->
+                        </tbody>
+                    </table>
+            </section>
+
+            <!-- Sección para mostrar la tabla de inscripciones -->
+            <section id="menu-inscripciones" class="d-none">
+                    <table class="table-striped">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Estudiante</th>
+                                <th class="text-center">Curso</th>
+                                <th class="text-center">Fecha de Inscripción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-inscripciones">
+                            <!-- Aquí se agregarán las inscripciones dinámicamente -->
                         </tbody>
                     </table>
             </section>
