@@ -1,0 +1,89 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Fundamental para que los hijos puedan calcular su altura */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #261BB3;
+}
+
+nav {
+    background-color: #333;
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    /* Quitamos cualquier padding aquí para que el ul mande */
+    padding: 0; 
+}
+
+nav ul {
+    color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 1em;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    /* CLAVE: Ponemos padding y margin en 0 */
+    padding: 0 20px; /* 0 arriba/abajo, 20px a los lados para que no toque el borde */
+    margin: 0; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    /* Asegúrate de que el botón no tenga márgenes que lo empujen */
+    display: inline-block; 
+}
+
+header{
+    background-color: #2914DE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    gap: 1em;
+    height: 80px;
+}
+
+header h2{
+    color: white;
+    margin: 0;
+}
+
+header img {
+    height: 100px; 
+    width: auto;
+}
+
+main {
+    padding: 0; /* Cambié esto a 0 para que no haya huecos blancos */
+    display: flex; 
+    /* CLAVE 1: Borra el flex-start y deja solo stretch */
+    align-items: stretch; 
+    /* CLAVE 2: Asegúrate que el cálculo reste el alto exacto de tu header y nav */
+    min-height: calc(100vh - 80px - 30px); 
+    color: black;
+}
+
+/* El contenido que no es el menú */
+.contenido-principal {
+    flex: 1; /* Ocupa el resto del espacio */
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+

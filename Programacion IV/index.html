@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ees">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/css/bootstrap.css">
+    <link rel="stylesheet" href="estilos/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="estilos/css/bootstrap.min.css">
+    <script src="scripts/app.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header> 
+            <h2>Cursos</h2>
+            <img src="estilos/logo.png" alt="Logo">
+    </header>
+        <nav>
+             <ul>
+                <li><a href="#" id="btn-inicio" class="btn btn-primary">Inicio</a></li>
+                <li><a href="#" id="btn-cursos" class="btn btn-primary">Cursos</a></li>
+                <li><a href="#" id="btn-estudiantes" class="btn btn-primary">Estudiantes</a></li>
+            </ul>
+        </nav>
+        <main> 
+            <section id="contenido-principal" class="contenido-principal">
+                    <h1>Bienvenido a nuestro sitio de cursos</h1>
+                    <p>Explora nuestra amplia variedad de cursos en diferentes áreas de conocimiento. Desde programación hasta diseño, tenemos algo para todos. ¡Empieza a aprender hoy mismo!</p>
+            </section>
+
+            <section id="menu-lateral" class="d-none">
+                    <table class="table-striped">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Curso</th>
+                                <th class="text-center">Descripción</th>
+                                <th class="text-center">Duración</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-cursos">
+                            <!-- Aquí se agregarán los cursos dinámicamente -->
+                        </tbody>
+                    </table>
+
+            </section>
+
+            <section id="menu-estudiantes" class="d-none">
+                    <table class="table-striped">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Nombre</th>
+                                <th class="text-center">Edad</th>
+                                <th class="text-center">Curso Inscrito</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-estudiantes">
+                            <!-- Aquí se agregarán los estudiantes dinámicamente -->
+                        </tbody>
+                    </table>
+            </section>
+
+        </main>
+        <footer>2026 My Website. All rights reserved.</footer>
+    
